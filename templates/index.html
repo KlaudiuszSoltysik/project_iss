@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Symulacja Koła - Realtime</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+<h1 style="text-align: center;">Symulacja Koła w czasie rzeczywistym</h1>
+
+<div style="width: 800px; margin: 0 auto; display: flex; align-items: center; margin-bottom: 20px;">
+    <label for="kpSlider" style="width: 200px; margin-right: 10px;">
+        Kp: <span id="kpVal">0</span>
+    </label>
+    <input type="range" id="kpSlider" min="0" max="20" step="0.1" value="0" style="flex: 1;">
+</div>
+
+<div style="width: 800px; margin: 0 auto; display: flex; align-items: center; margin-bottom: 20px;">
+    <label for="kiSlider" style="width: 200px; margin-right: 10px;">
+        Ki: <span id="kiVal">0</span>
+    </label>
+    <input type="range" id="kiSlider" min="0" max="20" step="0.1" value="0" style="flex: 1;">
+</div>
+
+<div style="width: 800px; margin: 0 auto; display: flex; align-items: center; margin-bottom: 20px;">
+    <label for="kdSlider" style="width: 200px; margin-right: 10px;">
+        Kd: <span id="kdVal">0</span>
+    </label>
+    <input type="range" id="kdSlider" min="0" max="2" step="0.01" value="0" style="flex: 1;">
+</div>
+
+<div style="width: 800px; margin: 0 auto; display: flex; align-items: center; margin-bottom: 20px;">
+    <label for="omegaSetSlider" style="width: 200px; margin-right: 10px;">
+        Prędkość zadana: <span id="omegaSetVal">0</span> rad/s
+    </label>
+    <input type="range" id="omegaSetSlider" min="0" max="20" step="0.1" value="0" style="flex: 1;">
+</div>
+
+<div style="width: 800px; margin: 0 auto; display: flex; align-items: center; margin-bottom: 20px;">
+    <label for="bSlider" style="width: 200px; margin-right: 10px;">
+        b: <span id="bVal">0</span> jednostka
+    </label>
+    <input type="range" id="bSlider" min="0" max="2" step="0.1" value="0" style="flex: 1;">
+</div>
+
+<div style="width: 800px; margin: 0 auto; display: flex; align-items: center; margin-bottom: 20px;">
+    <label for="disturbanceSlider" style="width: 200px; margin-right: 10px;">
+        disturbance: <span id="disturbanceVal">0</span> jednostka
+    </label>
+    <input type="range" id="disturbanceSlider" min="0" max="2" step="0.1" value="0" style="flex: 1;">
+</div>
+
+<div style="width: 800px; margin: 0 auto; margin-bottom: 20px;">
+    <canvas id="chart1" width="800" height="400" style="display: block; margin: 0 auto;"></canvas>
+</div>
+
+<div style="width: 800px; margin: 0 auto;">
+    <canvas id="chart2" width="800" height="400" style="display: block; margin: 0 auto;"></canvas>
+</div>
+
+<script src="static/script.js"></script>
+</body>
+</html>
